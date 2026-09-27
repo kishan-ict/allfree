@@ -15,3 +15,5 @@ html,body{overflow-x:hidden}.card-copy,.section-head,.hero-copy{min-width:0;over
 .request-form select{color-scheme:dark}.request-form select option{background:#10131d;color:#f4f7ff}
 
 @media(max-width:560px){html,body{overscroll-behavior-y:none}.site-header{box-shadow:none}.main-nav.mobile-open{display:flex;position:fixed;top:64px;left:12px;right:12px;z-index:30;flex-direction:column;gap:0;padding:8px;background:rgba(8,11,18,.96);border:1px solid rgba(255,255,255,.12);border-radius:16px;box-shadow:0 18px 45px rgba(0,0,0,.38);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}.main-nav.mobile-open a{min-height:46px;display:flex;align-items:center;padding:0 14px;border-radius:10px}.main-nav.mobile-open a:hover{background:rgba(255,255,255,.08);color:var(--accent)}}
+
+@media(max-width:560px){html,body{overflow-x:hidden;overflow-y:auto;overscroll-behavior-y:auto;touch-action:pan-y;-webkit-overflow-scrolling:touch}.mobile-energy-orb{touch-action:none}}
