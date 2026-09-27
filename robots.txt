@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kishan-ict.github.io/allfree/sitemap.xml
+Sitemap: https://allfree.pages.dev/sitemap.xml
