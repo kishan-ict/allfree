@@ -1,3 +1,10 @@
+# ALLFREE crawler access
+User-agent: Bravebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
 User-agent: *
 Allow: /
 
