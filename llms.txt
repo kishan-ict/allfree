@@ -4,10 +4,10 @@
 
 ## Primary website
 
-- Home: https://kishan-ict.github.io/allfree/
-- About: https://kishan-ict.github.io/allfree/about.html
-- Request a site: https://kishan-ict.github.io/allfree/request.html
-- Sitemap: https://kishan-ict.github.io/allfree/sitemap.xml
+- Home: https://allfree.pages.dev/
+- About: https://allfree.pages.dev/about.html
+- Request a site: https://allfree.pages.dev/request.html
+- Sitemap: https://allfree.pages.dev/sitemap.xml
 
 ## Brand
 
