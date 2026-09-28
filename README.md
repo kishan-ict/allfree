@@ -109,14 +109,6 @@ The production site is hosted on Cloudflare Pages:
 
 Connect the GitHub repository to Cloudflare Pages and deploy from the `main` branch. Every pushed change can then deploy automatically.
 
-### GitHub Pages
-
-The repository can also be served through GitHub Pages:
-
-- [https://kishan-ict.github.io/allfree/](https://kishan-ict.github.io/allfree/)
-
-Cloudflare Pages is the canonical production URL used by the SEO files.
-
 ## SEO files
 
 - [sitemap.xml](https://allfree.pages.dev/sitemap.xml) lists the indexable public pages.
