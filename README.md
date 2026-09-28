@@ -77,24 +77,6 @@ The United States directory currently contains 109 unique entries after duplicat
 └── llms.txt            # LLM-readable project description
 ```
 
-## Run locally
-
-This is a static HTML, CSS, and JavaScript project. No build step is required.
-
-```bash
-git clone https://github.com/kishan-ict/allfree.git
-cd allfree
-python3 -m http.server 8080
-```
-
-Open:
-
-```text
-http://localhost:8080
-```
-
-You can also open `index.html` directly, but a local HTTP server is recommended for consistent asset and browser behavior.
-
 ## Hosting
 
 ### Cloudflare Pages
