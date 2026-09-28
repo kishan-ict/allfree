@@ -1,8 +1,13 @@
-# ALLFREE crawler access
+# ALLFREE crawler policy
+# Public pages are available for indexing. External directory destinations are not owned by ALLFREE.
+
 User-agent: Bravebot
 Allow: /
 
 User-agent: Bingbot
+Allow: /
+
+User-agent: Googlebot
 Allow: /
 
 User-agent: *
