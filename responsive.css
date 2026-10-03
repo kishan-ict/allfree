@@ -96,3 +96,13 @@ html,body{overflow-x:hidden}.card-copy,.section-head,.hero-copy{min-width:0;over
   .mobile-move-sheet .move-options{padding-bottom:2px;}
   .mobile-move-sheet.open{display:block!important;}
 }
+
+/* SETUVYA rebrand and mode switch. */
+.brand-mark{display:grid;place-items:center;overflow:hidden}
+.brand-mark img{width:100%;height:100%;display:block;object-fit:cover}
+.mode-toggle{display:inline-flex;gap:5px;margin:0 auto 24px;padding:5px;border:1px solid rgba(255,255,255,.2);border-radius:999px;background:rgba(255,255,255,.06);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.mode-button{border:0;border-radius:999px;padding:10px 15px;background:transparent;color:var(--muted);font:600 10px 'DM Sans';letter-spacing:.08em;cursor:pointer}
+.mode-button.active{background:linear-gradient(135deg,rgba(53,230,154,.85),rgba(54,169,255,.85));color:#06111b;box-shadow:0 4px 16px rgba(54,169,255,.2)}
+.mode-empty{max-width:620px;margin:20px 0;padding:28px;display:grid;gap:8px;text-align:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.24);border-radius:20px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.mode-empty strong{font:600 20px 'Space Grotesk'}.mode-empty span{color:var(--muted);font-size:13px}
+@media(max-width:560px){.mode-toggle{margin-bottom:18px;width:100%;justify-content:center}.mode-button{flex:1;padding:10px 8px;font-size:9px}.mode-empty{margin:10px 0;padding:24px 16px}}
