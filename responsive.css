@@ -77,3 +77,14 @@ html,body{overflow-x:hidden}.card-copy,.section-head,.hero-copy{min-width:0;over
   .mobile-move-sheet::before{content:"";position:fixed;inset:0;z-index:-1;background:rgba(0,0,0,.28);pointer-events:auto}
   .move-sheet-head button,.move-options a{position:relative;z-index:2;min-height:52px}
 }
+
+/* Reliable mobile MOVE layering. */
+@media (max-width:700px){
+  .mobile-filter{position:fixed!important;z-index:100!important;pointer-events:auto!important}
+  .mobile-filter #filterToggle{position:relative!important;z-index:101!important;pointer-events:auto!important;cursor:pointer!important}
+  .mobile-move-sheet{display:block!important;visibility:hidden!important;opacity:0!important;pointer-events:none!important;transform:translateY(110%)!important;z-index:200!important}
+  .mobile-move-sheet.open{visibility:visible!important;opacity:1!important;pointer-events:auto!important;transform:translateY(0)!important}
+  .mobile-move-sheet::before{display:none!important}
+  .mobile-move-sheet .move-sheet-head button,
+  .mobile-move-sheet .move-options a{pointer-events:auto!important;cursor:pointer!important}
+}
