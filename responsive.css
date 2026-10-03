@@ -66,3 +66,14 @@ html,body{overflow-x:hidden}.card-copy,.section-head,.hero-copy{min-width:0;over
   .cards{gap:7px}.card{min-height:78px;padding:10px 8px}.card-name{font-size:11px}.card-url{font-size:8px}.site-icon{width:23px;height:23px}
   .stats{gap:9px}.stats span{font-size:7px}
 }
+
+/* Move interaction touch fix. */
+
+@media (max-width:700px){
+  body.move-open{overflow:hidden}
+  .mobile-filter #filterToggle,.mobile-move-sheet,.mobile-move-sheet *{touch-action:manipulation}
+  .mobile-move-sheet{display:block!important;pointer-events:none;opacity:0;transform:translateY(110%);transition:transform .25s ease,opacity .2s ease}
+  .mobile-move-sheet.open{pointer-events:auto;opacity:1;transform:translateY(0)}
+  .mobile-move-sheet::before{content:"";position:fixed;inset:0;z-index:-1;background:rgba(0,0,0,.28);pointer-events:auto}
+  .move-sheet-head button,.move-options a{position:relative;z-index:2;min-height:52px}
+}
