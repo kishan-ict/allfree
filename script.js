@@ -10,11 +10,26 @@ function openSearch(){modal.classList.add('open');modal.setAttribute('aria-hidde
 document.querySelector('#searchTrigger').onclick=openSearch;document.querySelector('#mobileSearch').onclick=openSearch;document.querySelector('#closeSearch').onclick=closeSearch;modal.onclick=e=>{if(e.target===modal)closeSearch()};document.addEventListener('keydown',e=>{if((e.metaKey||e.ctrlKey)&&e.key==='k'){e.preventDefault();openSearch()}if(e.key==='Escape')closeSearch()});
 input.oninput=()=>{const q=input.value.toLowerCase().trim();const all=data.flatMap(x=>x[3]);results.innerHTML=q?all.filter(x=>(x[0]+x[1]).toLowerCase().includes(q)).map(x=>`<a class="result" href="https://${x[1]}" target="_blank"><span>${x[0]}</span><small>${x[1]}</small></a>`).join(''):'<p class="section-desc">Start typing to search all sites.</p>'};
 const moveSheet=document.querySelector('#moveSheet'),closeMove=document.querySelector('#closeMove'),moveToggle=document.querySelector('#filterToggle');
+let moveScrollY=0;
 function setMoveSheet(open){
   if(!moveSheet)return;
-  moveSheet.classList.toggle('open',open);
-  moveSheet.setAttribute('aria-hidden',String(!open));
-  document.body.classList.toggle('move-open',open);
+  if(open){
+    moveScrollY=window.scrollY||window.pageYOffset||0;
+    moveSheet.classList.add('open');
+    moveSheet.setAttribute('aria-hidden','false');
+    document.body.classList.add('move-open');
+    document.body.style.top='-'+moveScrollY+'px';
+    document.body.style.position='fixed';
+    document.body.style.width='100%';
+  }else{
+    moveSheet.classList.remove('open');
+    moveSheet.setAttribute('aria-hidden','true');
+    document.body.classList.remove('move-open');
+    document.body.style.position='';
+    document.body.style.top='';
+    document.body.style.width='';
+    window.scrollTo(0,moveScrollY);
+  }
 }
 if(moveToggle) moveToggle.onclick=function(e){e.preventDefault();e.stopPropagation();setMoveSheet(true)};
 if(closeMove) closeMove.onclick=function(e){e.preventDefault();e.stopPropagation();setMoveSheet(false)};
